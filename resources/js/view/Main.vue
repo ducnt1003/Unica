@@ -92,7 +92,7 @@
             <div class="row g-3">
               <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
                 <a class="position-relative d-block overflow-hidden" href="">
-                  <img class="img-fluid" src="img/cat-1.jpg" alt="" />
+                  <img class="img-fluid" src="/img/cat-1.jpg" alt="" />
                   <div
                     class="
                       bg-white
@@ -112,7 +112,7 @@
               </div>
               <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
                 <a class="position-relative d-block overflow-hidden" href="">
-                  <img class="img-fluid" src="img/cat-2.jpg" alt="" />
+                  <img class="img-fluid" src="/img/cat-2.jpg" alt="" />
                   <div
                     class="
                       bg-white
@@ -132,7 +132,7 @@
               </div>
               <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
                 <a class="position-relative d-block overflow-hidden" href="">
-                  <img class="img-fluid" src="img/cat-3.jpg" alt="" />
+                  <img class="img-fluid" src="/img/cat-3.jpg" alt="" />
                   <div
                     class="
                       bg-white
@@ -160,7 +160,7 @@
             <a class="position-relative d-block h-100 overflow-hidden" href="">
               <img
                 class="img-fluid position-absolute w-100 h-100"
-                src="img/cat-4.jpg"
+                src="/img/cat-4.jpg"
                 alt=""
                 style="object-fit: cover"
               />
@@ -199,7 +199,7 @@
           <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
             <div class="course-item bg-light">
               <div class="position-relative overflow-hidden">
-                <img class="img-fluid" src="img/course-11.jpg" alt="" />
+                <img class="img-fluid" src="/img/course-11.jpg" alt="" />
                 <div
                   class="
                     w-100
@@ -255,7 +255,7 @@
           <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
             <div class="course-item bg-light">
               <div class="position-relative overflow-hidden">
-                <img class="img-fluid" src="img/course-12.jpg" alt="" />
+                <img class="img-fluid" src="/img/course-12.jpg" alt="" />
                 <div
                   class="
                     w-100
@@ -313,7 +313,7 @@
           <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
             <div class="course-item bg-light">
               <div class="position-relative overflow-hidden">
-                <img class="img-fluid" src="img/course-13.jpg" alt="" />
+                <img class="img-fluid" src="/img/course-13.jpg" alt="" />
                 <div
                   class="
                     w-100
@@ -385,7 +385,7 @@
             <div class="position-relative h-100">
               <img
                 class="img-fluid position-absolute w-100 h-100"
-                src="img/about.jpg"
+                src="/img/about.jpg"
                 alt=""
                 style="object-fit: cover"
               />
@@ -511,7 +511,7 @@
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
             <div class="team-item bg-light">
               <div class="overflow-hidden">
-                <img width="100%" height="300px" src="img/teac-1.jpg" alt="" />
+                <img width="100%" height="300px" src="/img/teac-1.jpg" alt="" />
               </div>
               <div
                 class="position-relative d-flex justify-content-center"
@@ -538,7 +538,7 @@
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
             <div class="team-item bg-light">
               <div class="overflow-hidden">
-                <img width="100%" height="300px" src="img/teac-2.jpg" alt="" />
+                <img width="100%" height="300px" src="/img/teac-2.jpg" alt="" />
               </div>
               <div
                 class="position-relative d-flex justify-content-center"
@@ -565,7 +565,7 @@
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
             <div class="team-item bg-light">
               <div class="overflow-hidden">
-                <img width="100%" height="300px" src="img/teac-3.jpg" alt="" />
+                <img width="100%" height="300px" src="/img/teac-3.jpg" alt="" />
               </div>
               <div
                 class="position-relative d-flex justify-content-center"
@@ -592,7 +592,7 @@
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
             <div class="team-item bg-light">
               <div class="overflow-hidden">
-                <img width="100%" height="300px" src="img/teac-4.jpg" alt="" />
+                <img width="100%" height="300px" src="/img/teac-4.jpg" alt="" />
               </div>
               <div
                 class="position-relative d-flex justify-content-center"

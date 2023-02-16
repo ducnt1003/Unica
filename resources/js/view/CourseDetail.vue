@@ -248,7 +248,7 @@
                 <div class="pl-3">
                   <img
                     class="img-fluid rounded"
-                    src="img/course-11.jpg"
+                    src="/img/course-11.jpg"
                     alt=""
                   />
                   <h6>TikTok : Tiếp cận khách hàng</h6>
@@ -271,7 +271,7 @@
                 <div class="pl-3">
                   <img
                     class="img-fluid rounded"
-                    src="img/course-12.jpg"
+                    src="/img/course-12.jpg"
                     alt=""
                   />
                   <h6>Piano Solo Căn Bản Cho Mọi Lứa Tuổi</h6>
