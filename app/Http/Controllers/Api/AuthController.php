@@ -53,6 +53,28 @@ class AuthController extends Controller
         return $this->sendResponse($user, __('admin.message.success'));
     }
 
+    /**
+     * Get the authenticated User.
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function me()
+    {
+        return $this->sendResponse(Auth::user(), __('admin.message.success'));
+    }
+
+    /**
+     * Log the user out (Invalidate the token).
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function logout()
+    {
+        Auth::logout();
+
+        return $this->sendResponse(['message' => 'Successfully logged out'], __('admin.message.success'));
+    }
+
      /**
      * Get the token array structure.
      *
