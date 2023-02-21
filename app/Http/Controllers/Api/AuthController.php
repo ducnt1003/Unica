@@ -88,7 +88,7 @@ class AuthController extends Controller
             'user' => Auth::user(),
             'access_token' => $token,
             'token_type' => 'bearer',
-            'expires_in' => Auth::factory()->getTTL()
+            'expires_in' => Auth::factory()->getTTL() *60
         ]);
         return $this->sendResponse($response, __('admin.message.success'));
     }
