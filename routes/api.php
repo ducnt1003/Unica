@@ -3,6 +3,7 @@
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\CourseController;
+use App\Http\Controllers\Api\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -43,5 +44,10 @@ Route::prefix('course')->group(function () {
     Route::get('/list-view/{id}', [CourseController::class, 'listView']);
     Route::get('/list-subcribe/{id}', [CourseController::class, 'listSubcribe']);
     Route::get('/list-favo/{id}', [CourseController::class, 'listFavo']);
+});
+
+Route::prefix('user')->group(function () {
+    // Route::get('/', [UserController::class, 'list']);
+    Route::get('/{id}', [UserController::class, 'getInfo']);
 });
 
