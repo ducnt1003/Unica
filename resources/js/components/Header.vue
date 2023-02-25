@@ -45,7 +45,7 @@
           </div>
           <a href="contact.html" class="nav-item nav-link">Liên hệ</a>
         </div>
-        <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block"
+        <a href="/login" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block"
           >Đăng ký ngay<i class="fa fa-arrow-right ms-3"></i
         ></a>
       </div>

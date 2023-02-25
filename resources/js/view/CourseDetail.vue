@@ -183,8 +183,7 @@
                           <div class="col-xs-2 col-md-2">
                             <a href="">Học thử</a>
                           </div>
-                          <video width="320" height="240" controls>
-                            <source 
+                          <video width="320" height="240" controls src="/storage/video/Stephen Sanchez - Until I Found You.mp4"
                             type="video/mp4"> video from video folder.
                           </video>
                           <div class="col-xs-3 col-md-2">6:23</div>
@@ -240,7 +239,7 @@
             </div>
 
             <div class="mb-5">
-              <h2 class="mb-4">Khóa học hiện tại</h2>
+              <h2 class="mb-4">Khóa học tương tự</h2>
               <a
                 class="d-flex align-items-center text-decoration-none mb-4"
                 href=""

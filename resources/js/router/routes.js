@@ -14,6 +14,12 @@ const routes = [
       },
       {
         /** Full page layout routes */
+        path: '/select-tag',
+        name: 'SelectTag',
+        component: () => import('@/view/SelectTag.vue'),
+      },
+      {
+        /** Full page layout routes */
         path: '/course-detail',
         name: 'Course-Detail',
         component: () => import('@/view/CourseDetail.vue'),
@@ -24,6 +30,11 @@ const routes = [
     path: '/login',
     name: 'Login',
     component: () => import('@/view/Login.vue'),
+  },
+  {
+    path: '/register',
+    name: 'Register',
+    component: () => import('@/view/Register.vue'),
   },
 ]
 

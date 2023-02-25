@@ -144,6 +144,7 @@ class CourseController extends Controller
         // return $courses;
         $courseSimilarity = new CourseSimilarity($courses);
         $similarityMatrix  = $courseSimilarity->calculateSimilarityMatrix();
-        return $similarityMatrix;
+        $results = $courseSimilarity->getProductsSortedBySimularity($id, $similarityMatrix);
+        return $results;
     }
 }

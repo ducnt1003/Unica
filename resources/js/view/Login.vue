@@ -18,48 +18,30 @@
 
                     <div class="col-lg-6 mb-5 mb-lg-0">
                         <div class="card">
+                            <h2 class="card-title px-md-5 text-center">Đăng nhập</h2>
                             <div class="card-body py-5 px-md-5">
                                 <form>
-                                    <!-- Name input -->
-                                    <div class="form-outline mb-4">
-                                        <label class="form-label" for="form3Example3">Name</label>
-                                        <input type="text" class="form-control" />
-                                    </div>
-
                                     <!-- Email input -->
                                     <div class="form-outline mb-4">
-                                        <label class="form-label" for="form3Example3">Email address</label>
+                                        <label class="form-label" for="form3Example3">Email</label>
                                         <input type="email" class="form-control" />
                                     </div>
 
                                     <!-- Password input -->
                                     <div class="form-outline mb-4">
-                                        <label class="form-label" for="form3Example4">Password</label>
+                                        <label class="form-label" for="form3Example4">Mật khẩu</label>
                                         <input type="password" class="form-control" />
-                                    </div>
-
-                                    <!-- Password input -->
-                                    <div class="form-outline mb-4">
-                                        <label class="form-label" for="form3Example4">Confirm Password</label>
-                                        <input type="password" class="form-control" />
-                                    </div>
-
-                                    <!-- Checkbox -->
-                                    <div class="form-check d-flex justify-content-center mb-4">
-                                        <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33"
-                                            checked />
-                                        <label class="form-check-label" for="form2Example33">
-                                            Subscribe to our newsletter
-                                        </label>
                                     </div>
 
                                     <!-- Submit button -->
                                     <div class="d-flex justify-content-center">
-                                        <button type="submit" class="btn btn-primary btn-block mb-4">
-                                        Sign up
-                                    </button>
+                                        <a href="/" type="submit" class="btn btn-primary btn-block mb-4">
+                                        Sign in
+                                        </a>
                                     </div>
-                                    
+                                    <div class="d-flex justify-content-center">
+                                        Chưa có tài khoản ? <router-link to="/register"> Đăng ký</router-link>
+                                    </div>
                                 </form>
                             </div>
                         </div>

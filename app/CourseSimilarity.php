@@ -64,12 +64,12 @@ class CourseSimilarity
 
         foreach ($similarities as $productIdKey => $similarity) {
             $id       = intval(str_replace('product_id_', '', $productIdKey));
-            $products = array_filter($this->products, function ($product) use ($id) { return $product->id === $id; });
+            $products = array_filter($this->products, function ($product) use ($id) { return $product['id'] === $id; });
             if (! count($products)) {
                 continue;
             }
             $product = $products[array_keys($products)[0]];
-            $product->similarity = $similarity;
+            $product['similarity'] = $similarity;
             $sortedProducts[] = $product;
         }
         return $sortedProducts;
@@ -77,16 +77,16 @@ class CourseSimilarity
 
     protected function calculateSimilarityScore($productA, $productB)
     {
-        $productAFeatures = implode('', get_object_vars($productA['features']));
-        $productBFeatures = implode('', get_object_vars($productB['features']));
+        $productAFeatures = implode('', $productA['features']);
+        $productBFeatures = implode('', $productB['features']);
 
         return array_sum([
             (Similarity::hamming($productAFeatures, $productBFeatures) * $this->featureWeight),
             (Similarity::euclidean(
-                Similarity::minMaxNorm([$productA->price], 0, $this->priceHighRange),
-                Similarity::minMaxNorm([$productB->price], 0, $this->priceHighRange)
+                Similarity::minMaxNorm([$productA['price']], 0, $this->priceHighRange),
+                Similarity::minMaxNorm([$productB['price']], 0, $this->priceHighRange)
             ) * $this->priceWeight),
-            (Similarity::jaccard($productA->category->name, $productB->category->name) * $this->categoryWeight)
+            (Similarity::jaccard($productA['category']['name'], $productB['category']['name']) * $this->categoryWeight)
         ]) / ($this->featureWeight + $this->priceWeight + $this->categoryWeight);
     }
 }
