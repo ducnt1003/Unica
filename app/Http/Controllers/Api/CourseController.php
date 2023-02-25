@@ -31,6 +31,7 @@ class CourseController extends Controller
             'photo' => $course->photo,
             'duration' => $course->duration,
             'parts' => $parts,
+            'tags' => $course->features,
         ];
         return $this->sendResponse($data, __('admin.message.success'));
         
@@ -121,13 +122,13 @@ class CourseController extends Controller
 
     public function listSubcribe($id) {
         $user = User::find($id);
-        $courses = $user->courses->where('pivot.is_subcribe', '=', '1');
+        $courses = $user->courses_subcribe;
         return $this->sendResponse($courses, __('admin.message.success'));
     }
 
     public function listFavo($id) {
         $user = User::find($id);
-        $courses = $user->courses->where('pivot.is_favo', '=', '1');
+        $courses = $user->courses_favo;
         return $this->sendResponse($courses, __('admin.message.success'));
     }
 }

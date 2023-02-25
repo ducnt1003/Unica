@@ -69,4 +69,18 @@ class User extends Authenticatable implements JWTSubject
     public function courses(){
         return $this->belongsToMany(Course::class, 'course_user')->withPivot('is_seen', 'is_subcribe', 'is_favo')->orderByPivot('created_at', 'desc');
     }
+
+    public function courses_subcribe(){
+        return $this->belongsToMany(Course::class, 'course_user')
+            ->withPivot('is_seen', 'is_subcribe', 'is_favo')
+            ->wherePivot('is_subcribe', 1)
+            ->orderByPivot('created_at', 'desc');
+    }
+
+    public function courses_favo(){
+        return $this->belongsToMany(Course::class, 'course_user')
+            ->withPivot('is_seen', 'is_subcribe', 'is_favo')
+            ->wherePivot('is_favo', 1)
+            ->orderByPivot('created_at', 'desc');
+    }
 }
