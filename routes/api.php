@@ -44,6 +44,7 @@ Route::prefix('course')->group(function () {
     Route::get('/list-view/{id}', [CourseController::class, 'listView']);
     Route::get('/list-subcribe/{id}', [CourseController::class, 'listSubcribe']);
     Route::get('/list-favo/{id}', [CourseController::class, 'listFavo']);
+    Route::get('/similar/{id}', [CourseController::class, 'getSimilarCourses']);
 });
 
 Route::prefix('user')->group(function () {

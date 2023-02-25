@@ -7,6 +7,7 @@ use App\Models\Course;
 use App\Models\CourseUser;
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\CourseSimilarity;
 
 class CourseController extends Controller
 {
@@ -37,9 +38,12 @@ class CourseController extends Controller
         
     }
 
-    public function getList()
+    public function getList(Request $request)
     {
-        return $this->sendResponse(Course::all(), __('admin.message.success'));
+        $user_id = $request->user_id;
+        return $this->sendResponse(Course::with(['users'=>function($query) use ($user_id){
+            $query->where('users.id',$user_id);  
+        }])->get(), __('admin.message.success'));
     }
 
     public function viewCourse(Request $request) {
@@ -130,5 +134,13 @@ class CourseController extends Controller
         $user = User::find($id);
         $courses = $user->courses_favo;
         return $this->sendResponse($courses, __('admin.message.success'));
+    }
+
+    public function getSimilarCourses($id) {
+        $courses = Course::get()->toArray();
+        // return $courses;
+        $courseSimilarity = new CourseSimilarity($courses);
+        $similarityMatrix  = $courseSimilarity->calculateSimilarityMatrix();
+        return $similarityMatrix;
     }
 }

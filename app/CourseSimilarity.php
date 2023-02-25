@@ -86,7 +86,7 @@ class CourseSimilarity
                 Similarity::minMaxNorm([$productA->price], 0, $this->priceHighRange),
                 Similarity::minMaxNorm([$productB->price], 0, $this->priceHighRange)
             ) * $this->priceWeight),
-            (Similarity::jaccard($productA->categories, $productB->categories) * $this->categoryWeight)
+            (Similarity::jaccard($productA->category->name, $productB->category->name) * $this->categoryWeight)
         ]) / ($this->featureWeight + $this->priceWeight + $this->categoryWeight);
     }
 }

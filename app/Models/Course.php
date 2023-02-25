@@ -22,6 +22,11 @@ class Course extends Model
         return $this->belongsTo(User::class, 'user_id');
     }
 
+    public function users(){
+        return $this->belongsToMany(User::class, 'course_user')->withPivot('is_seen', 'is_subcribe', 'is_favo');
+    }
+
+
     public function course_parts(){
         return $this->hasMany(CoursePart::class, 'course_id');
     }
