@@ -73,13 +73,14 @@ class CourseController extends Controller
     public function subcribeCourse(Request $request) {
         $course_id = $request->course_id;
         $user_id = $request->user_id;
+        $is_subcribe = $request->is_subcribe;
         if (!Course::find($course_id) || !User::find($user_id)){
             return $this->sendError(null, __('admin.message.error'));
         }
         $course_user = CourseUser::where('user_id', '=', $user_id)
         ->where('course_id', '=', $course_id)->first();
         if ($course_user) {
-            $course_user->is_subcribe = 1;
+            $course_user->is_subcribe = $is_subcribe;
             $course_user->save();
         } else {
             $course_user = CourseUser::create([
@@ -97,13 +98,14 @@ class CourseController extends Controller
     public function favoCourse(Request $request) {
         $course_id = $request->course_id;
         $user_id = $request->user_id;
+        $is_favo = $request->is_favo;
         if (!Course::find($course_id) || !User::find($user_id)){
             return $this->sendError(null, __('admin.message.error'));
         }
         $course_user = CourseUser::where('user_id', '=', $user_id)
         ->where('course_id', '=', $course_id)->first();
         if ($course_user) {
-            $course_user->is_favo = 1;
+            $course_user->is_favo = $is_favo;
             $course_user->save();
         } else {
             $course_user = CourseUser::create([
@@ -137,7 +139,8 @@ class CourseController extends Controller
     }
 
     public function getSimilarCourses($id) {
-        $courses = Course::get()->toArray();
+        // $courses = json_decode(json_encode(Course::get()), true);
+        $courses = Course::with(['category'])->get()->toArray();
         // return $courses;
         $courseSimilarity = new CourseSimilarity($courses);
         $similarityMatrix  = $courseSimilarity->calculateSimilarityMatrix();

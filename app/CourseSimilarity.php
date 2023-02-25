@@ -42,12 +42,12 @@ class CourseSimilarity
             $similarityScores = [];
 
             foreach ($this->products as $_product) {
-                if ($product->id === $_product->id) {
+                if ($product['id'] === $_product['id']) {
                     continue;
                 }
-                $similarityScores['product_id_' . $_product->id] = $this->calculateSimilarityScore($product, $_product);
+                $similarityScores['product_id_' . $_product['id']] = $this->calculateSimilarityScore($product, $_product);
             }
-            $matrix['product_id_' . $product->id] = $similarityScores;
+            $matrix['product_id_' . $product['id']] = $similarityScores;
         }
         return $matrix;
     }
@@ -77,8 +77,8 @@ class CourseSimilarity
 
     protected function calculateSimilarityScore($productA, $productB)
     {
-        $productAFeatures = implode('', get_object_vars($productA->features));
-        $productBFeatures = implode('', get_object_vars($productB->features));
+        $productAFeatures = implode('', get_object_vars($productA['features']));
+        $productBFeatures = implode('', get_object_vars($productB['features']));
 
         return array_sum([
             (Similarity::hamming($productAFeatures, $productBFeatures) * $this->featureWeight),
